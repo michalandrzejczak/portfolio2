@@ -1,0 +1,36 @@
+#cite-section {
+	float: left;
+	position: relative;
+	height: 100%;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $color1;
+
+	.cite-container {
+		width: 600px;
+		height: 200px;
+		text-align: center;
+		margin: 20px auto;
+		padding: 30px;
+		z-index: 1;
+		border-top-left-radius: 50px;
+		border-bottom-right-radius: 50px;
+		border: 1px solid $color3;
+		background-color: $color2;
+		color: $color5;
+	}
+
+	&::before {
+		content: "";
+		height: 4px;
+		width: 100%;
+		z-index: 1;
+		border-top: 2px dotted $color4;
+		display: block;
+		position: absolute;
+		left: -50%;
+		top: 50%;
+	}
+}

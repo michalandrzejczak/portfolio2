@@ -1,0 +1,45 @@
+#stack-section {
+	display: flex;
+	position: relative;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	.stack-container {
+		min-width: 70vw;
+		min-height: 40vh;
+		text-align: center;
+		margin: 20px auto;
+		padding: 30px;
+		z-index: 1;
+/*		border-top-left-radius: 50px;
+		border-bottom-left-radius: 50px;
+		border-bottom-right-radius: 50px;*/
+		border: 1px solid $color3;
+		background-color: $color2;
+		color: $color5;
+		box-shadow: 0 0 100px $color4;
+		h1, h2 {
+			font-weight: 100;
+		}
+		h1 {
+			font-size: 2.5em;
+			color: $fontcolor;
+		}
+		h2 {
+			color: $color5;
+		}
+	}
+	&::after {
+		content: "";
+		z-index: 0;
+		height: 90vh;
+		width: 4px;
+		border-right: 2px dotted $color4;
+		display: block;
+		position: absolute;
+		left: 50%;
+		top: -50%;
+		margin-left: -1px;
+		margin-top: 100px;
+	}
+}

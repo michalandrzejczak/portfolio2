@@ -1,0 +1,50 @@
+#whois-section {
+	float: left;
+	position: relative;
+	height: 100%;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $color1;
+
+	.whois-container {
+		max-width: 800px;
+		min-height: 400px;
+		margin: 20px auto;
+		padding: 30px;
+		z-index: 2;
+		border-top-left-radius: 50px;
+		border-top-right-radius: 50px;
+		border-bottom-left-radius: 50px;
+		border: 1px solid $color4;
+		background-color: $color3;
+		h1 {
+			font-size: 3em;
+			color: $color5;
+			font-weight: 100;
+		}
+	}
+
+	&::before {
+		content: "";
+		height: 100%;
+		width: 4px;
+		border-right: 2px dotted $color4;
+		display: block;
+		position: relative;
+		left: 50%;
+		top: -50%;
+		margin-left: -1px;
+	}
+	&::after {
+		content: "";
+		height: 4px;
+		width: 100%;
+		border-top: 2px dotted $color4;
+		display: block;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+	}
+}

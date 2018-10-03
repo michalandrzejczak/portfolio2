@@ -1,1 +1,10 @@
 @import "./plugins/normalize.scss";
+
+@import "./palette.scss";
+@import "./keyframes.scss";
+
+@import "./sections/main.scss";
+@import "./sections/home.scss";
+@import "./sections/whois.scss";
+@import "./sections/cite.scss";
+@import "./sections/stack.scss";

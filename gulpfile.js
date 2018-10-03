@@ -68,9 +68,9 @@ gulp.task('build', () =>
 );
 
 gulp.task('watch', () => {
-	gulp.watch('./src/sass/**', ['buildcss']);
+	gulp.watch('./src/sass/*/**', ['buildcss']);
 	gulp.watch('./src/*.html', ['htmlmin']);
-	gulp.watch('./src/js/**', ['buildjs']);
+	gulp.watch('./src/js/*', ['buildjs']);
 	gulp.watch('./src/img/*', ['copyImages'])
 });
 
