@@ -4,6 +4,7 @@
 	height: 100%;
 	justify-content: center;
 	align-items: center;
+
 	.home-container {
 		min-width: 600px;
 		min-height: 200px;
@@ -15,23 +16,22 @@
 		border-bottom-right-radius: 50px;
 		border: 1px solid $color3;
 		background-color: $color2;
-		color: $color5;
 		animation: pulseHomeContainer 10s ease-in-out infinite;
-		h1, h2 {
-			font-weight: 100;
-		}
+
 		h1 {
 			font-size: 2.5em;
 			color: $fontcolor;
 		}
+
 		h2 {
 			color: $color5;
 		}
 	}
+
 	&::after {
 		content: "";
 		height: 100vh;
-		width: 4px;
+		width: 2px;
 		border-right: 2px dotted $color4;
 		display: block;
 		position: absolute;

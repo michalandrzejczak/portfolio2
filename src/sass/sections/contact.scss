@@ -1,14 +1,13 @@
-#whois-section {
-	float: left;
+#contact-section {
+	display: flex;
 	position: relative;
 	height: 100%;
-	width: 50%;
-	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-color: $color1;
+	overflow: hidden;
 
-	.whois-container {
+	.contact-container {
 		max-width: 800px;
 		min-height: 400px;
 		margin: 20px auto;
@@ -28,6 +27,7 @@
 
 	&::before {
 		content: "";
+		z-index: 1;
 		height: 100%;
 		width: 2px;
 		border-right: 2px dotted $color4;
@@ -36,16 +36,5 @@
 		left: 50%;
 		top: -50%;
 		margin-left: -1px;
-	}
-
-	&::after {
-		content: "";
-		height: 2px;
-		width: 100%;
-		border-top: 2px dotted $color4;
-		display: block;
-		position: absolute;
-		left: 50%;
-		top: 50%;
 	}
 }

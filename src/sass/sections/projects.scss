@@ -1,0 +1,139 @@
+#projects-section {
+	float: left;
+	position: relative;
+	height: 100%;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $color1;
+	z-index: 1;
+
+	.projects-container {
+		display: flex;
+		align-items: center;
+		width: 90%;
+		height: 500px;
+		margin: 20px auto;
+		padding: 30px;
+		position: relative;
+		z-index: 3;
+		background: $color2;
+		background: linear-gradient(0deg, $color1 0%, $color2 50%, $color1 100%);
+		border-left: 1px solid $color5;
+		border-right: 1px solid $color5;
+		overflow: hidden;
+
+		h1 {
+			position: absolute;
+			color: $fontcolor;
+			top: 10%;
+			border-bottom: 1px solid $color5;
+		}
+
+		.project-wrapper {
+			min-width: 300px;
+			height: 200px;
+			position: relative;
+			margin: 0 30px;
+			background-color: rgba(0, 0, 0, 0.2);
+			&:hover .project-bg{
+				filter: blur(2px) brightness(0.3);
+				box-shadow: 0 0 50px $color4;
+			}
+			&:hover .project-anchors {
+				display: flex;
+			}
+		}
+		.project-bg {
+			min-width: 300px;
+			height: 200px;
+			z-index: 4;
+			position: absolute;
+			left: 0;
+			top: 0;
+			filter: blur(2px) brightness(0.1);
+			transition: all 0.3s ease;
+		}
+		@mixin projectBg($project) {
+			.#{$project} {
+				background-image: url(unquote('"./img/card-"#{$project}".jpg"'));
+			}
+		}
+		@include projectBg("unsplash");
+		@include projectBg("jar");
+		@include projectBg("jdm");
+		@include projectBg("portfolio1");
+		@include projectBg("psdtohtml2");
+		@include projectBg("psdtohtml1");
+		@include projectBg("todos");
+		@include projectBg("stickynotes");
+		@include projectBg("snakegame");
+		
+		.project-content-wrapper {
+			position: relative;
+			z-index: 5;
+			padding: 20px;
+			h3 {
+				color: $color5;
+			}
+			p {
+				font-size: 0.9em;
+				color: darken($fontcolor, 0.9);
+			}
+		}
+		
+		.project-anchors {
+			display: none;
+			justify-content: space-around;
+			align-items: center;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 6;
+			background-color: rgba(0, 0, 0, 0.1);
+			width: 300px;
+			height: 40px;
+			transition: all 0.3s ease;
+			a {
+				color: $fontcolor;
+				text-decoration: none;
+				transition: all 0.3s ease;
+				&:hover {
+					color: $color5;
+				}
+			}
+			i {
+				font-size: 1.2em;
+				margin: 0 3px;
+			}
+		}
+		
+
+	}
+
+	&::before {
+		content: "";
+		height: 2px;
+		width: 100%;
+		z-index: 2;
+		border-top: 2px dotted $color4;
+		box-shadow: 0 0 20px $color4;
+		display: block;
+		position: absolute;
+		left: -50%;
+		top: 50%;
+	}
+	&::after {
+		content: "";
+		height: 100vh;
+		width: 2px;
+		border-right: 2px dotted $color4;
+		display: block;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-top: 2px;
+		margin-left: -1px;
+	}
+}

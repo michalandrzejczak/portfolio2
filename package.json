@@ -46,5 +46,7 @@
     "run-sequence": "^2.2.1",
     "scrollmagic": "^2.0.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "perfect-scrollbar": "^1.4.0"
+  }
 }
