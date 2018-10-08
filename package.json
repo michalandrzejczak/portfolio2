@@ -1,14 +1,14 @@
 {
-  "name": "project-jdm",
+  "name": "portfolio2",
   "version": "1.0.0",
-  "description": "Personal idea, Japan Domestic Market (JDM) topic",
+  "description": "Portfolio2 description",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+[https://github.com/michalandrzejczak/project-jdm.git]"
+    "url": "git+[url]"
   },
   "keywords": [
     "html5",
@@ -17,15 +17,14 @@
     "es6",
     "gulp",
     "project",
-    "jdm",
-    "japan domestic market"
+    "portfolio"
   ],
   "author": "Michał Andrzejczak",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/michalandrzejczak/project-jdm.git/issues"
+    "url": "url/issues"
   },
-  "homepage": "https://github.com/michalandrzejczak/project-jdm.git#readme",
+	"homepage": "https://github.com/michalandrzejczak/portfolio2#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",

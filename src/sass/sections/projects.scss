@@ -9,6 +9,36 @@
 	background-color: $color1;
 	z-index: 1;
 
+	div[class^="arrow"] {
+		z-index: 10;
+		position: absolute;
+		margin: 0 20px;
+
+		i {
+			font-size: 30px;
+			color: $fontcolor;
+			opacity: 0.5;
+			transition: all 0.3s ease;
+		}
+
+		&:hover i {
+			cursor: pointer;
+			opacity: 1;
+		}
+
+		&:active i {
+			transform: scale(0.9);
+		}
+	}
+
+	.arrow-left {
+		left: 80px;
+	}
+
+	.arrow-right {
+		right: 80px;
+	}
+
 	.projects-container {
 		display: flex;
 		align-items: center;
@@ -33,18 +63,21 @@
 
 		.project-wrapper {
 			min-width: 300px;
-			height: 200px;
+			height: 200px; 
 			position: relative;
 			margin: 0 30px;
 			background-color: rgba(0, 0, 0, 0.2);
-			&:hover .project-bg{
+
+			&:hover .project-bg {
 				filter: blur(2px) brightness(0.3);
 				box-shadow: 0 0 50px $color4;
 			}
+
 			&:hover .project-anchors {
 				display: flex;
 			}
 		}
+
 		.project-bg {
 			min-width: 300px;
 			height: 200px;
@@ -55,11 +88,13 @@
 			filter: blur(2px) brightness(0.1);
 			transition: all 0.3s ease;
 		}
+
 		@mixin projectBg($project) {
 			.#{$project} {
 				background-image: url(unquote('"./img/card-"#{$project}".jpg"'));
 			}
 		}
+
 		@include projectBg("unsplash");
 		@include projectBg("jar");
 		@include projectBg("jdm");
@@ -69,20 +104,22 @@
 		@include projectBg("todos");
 		@include projectBg("stickynotes");
 		@include projectBg("snakegame");
-		
+
 		.project-content-wrapper {
 			position: relative;
 			z-index: 5;
 			padding: 20px;
+
 			h3 {
 				color: $color5;
 			}
+
 			p {
 				font-size: 0.9em;
 				color: darken($fontcolor, 0.9);
 			}
 		}
-		
+
 		.project-anchors {
 			display: none;
 			justify-content: space-around;
@@ -95,20 +132,23 @@
 			width: 300px;
 			height: 40px;
 			transition: all 0.3s ease;
+
 			a {
 				color: $fontcolor;
 				text-decoration: none;
 				transition: all 0.3s ease;
+
 				&:hover {
 					color: $color5;
 				}
 			}
+
 			i {
 				font-size: 1.2em;
 				margin: 0 3px;
 			}
 		}
-		
+
 
 	}
 
@@ -124,6 +164,7 @@
 		left: -50%;
 		top: 50%;
 	}
+
 	&::after {
 		content: "";
 		height: 100vh;
