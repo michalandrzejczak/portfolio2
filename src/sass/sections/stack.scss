@@ -71,35 +71,24 @@
 		}
 		.tech-wrapper6 {
 			@include techPulse("strong", #001c91)
-				}
+		}
 		.tech-wrapper7 {
 			@include techPulse("strong", #f03a4f)
-				}
+		}
 		.tech-wrapper8 {
 			@include techPulse("medium", #3efcdf)
-				}
+		}
 		.tech-wrapper9 {
 			@include techPulse("weak", #c31f1f)
-				}
+		}
 		.tech-wrapper10 {
 			@include techPulse("strong", #e84275)
-				}
+		}
 		.tech-wrapper11 {
 			@include techPulse("weak", #0869bc)
-				}
+		}
 		.tech-wrapper12 {
 			@include techPulse("weak", #b332e3)
-				}
-/*		.level-strong {
-			animation: techStrongPulse 9s ease-in-out 0s infinite;
 		}
-
-		.level-medium {
-			animation: techMediumPulse 9s ease-in-out 3s infinite;
-		}
-
-		.level-weak {
-			animation: techWeakPulse 9s ease-in-out 6s infinite;
-		}*/
 	}
 }
