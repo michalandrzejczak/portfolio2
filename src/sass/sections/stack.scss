@@ -30,7 +30,7 @@
 		width: 2px;
 		border-right: 2px dotted $color4;
 		display: block;
-		position: absolute;	
+		position: absolute;
 		left: 50%;
 		top: -50%;
 		margin-left: -1px;
@@ -38,13 +38,13 @@
 
 	.tech-gallery {
 		display: flex;
-		justify-content: space-around;
+		justify-content: center;
 		align-content: center;
 		align-items: center;
 		flex-wrap: wrap;
 
 		[class^="tech-wrapper"] {
-			transform: none; 
+			transform: none;
 			filter: blur(1px) grayscale(0.8);
 			margin: 10px 20px;
 
@@ -53,42 +53,70 @@
 				width: 80px;
 			}
 		}
-		
+
 		.tech-wrapper1 {
 			@include techPulse("strong", #ff4500)
 		}
+
 		.tech-wrapper2 {
 			@include techPulse("strong", #2973ff)
 		}
+
 		.tech-wrapper3 {
 			@include techPulse("medium", #ffc016)
 		}
+
 		.tech-wrapper4 {
 			@include techPulse("medium", #eb2931)
 		}
+
 		.tech-wrapper5 {
 			@include techPulse("medium", #c92f00)
 		}
+
 		.tech-wrapper6 {
 			@include techPulse("strong", #001c91)
 		}
+
 		.tech-wrapper7 {
 			@include techPulse("strong", #f03a4f)
 		}
+
 		.tech-wrapper8 {
 			@include techPulse("medium", #3efcdf)
 		}
+
 		.tech-wrapper9 {
 			@include techPulse("weak", #c31f1f)
 		}
+
 		.tech-wrapper10 {
 			@include techPulse("strong", #e84275)
 		}
+
 		.tech-wrapper11 {
 			@include techPulse("weak", #0869bc)
 		}
+
 		.tech-wrapper12 {
 			@include techPulse("weak", #b332e3)
+		}
+	}
+
+	.tech-instruction {
+		margin-top: 20px;
+		color: $color4;
+		font-size: 0.8em;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#stack-section {
+		width: 100%;
+		float: none;
+
+		&::before {
+			display: none;
 		}
 	}
 }

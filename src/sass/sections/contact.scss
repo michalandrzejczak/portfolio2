@@ -30,15 +30,18 @@
 		.contact-form-container {
 			display: flex;
 			justify-content: center;
+
 			.contact-form-row1 {
 				margin: 10px;
+
 				label {
 					display: inline-block;
 				}
 			}
-			
+
 			.contact-form-row2 {
 				margin: 10px;
+
 				label {
 					display: block;
 				}
@@ -84,15 +87,17 @@
 				padding: 7px 15px;
 				outline: none;
 				transition: all 0.3s ease;
+
 				&:hover {
 					cursor: pointer;
 					background-color: $color4;
 				}
+
 				&:active {
 					transform: scale(0.95);
 				}
 			}
-			
+
 		}
 
 
@@ -109,5 +114,13 @@
 		left: 50%;
 		top: -50%;
 		margin-left: -1px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#contact-section {
+		&::before {
+			display: none;
+		}
 	}
 }

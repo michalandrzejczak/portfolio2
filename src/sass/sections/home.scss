@@ -30,7 +30,7 @@
 
 	&::after {
 		content: "";
-		height: 100vh;
+		height: 100%;
 		width: 2px;
 		border-right: 2px dotted $color4;
 		display: block;
@@ -38,5 +38,17 @@
 		left: 50%;
 		top: 50%;
 		margin-left: -1px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#home-section {
+		.home-container {
+			min-width: 90%;
+			width: 90%;
+		}
+		&::after {
+			display: none;
+		}
 	}
 }
