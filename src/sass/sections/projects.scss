@@ -182,6 +182,8 @@
 @media only screen and (max-width: 768px) {
 	#projects-section {
 		width: 100%;
+		margin: 100px 0;
+		height: auto;
 		float: none;
 
 		&::before,

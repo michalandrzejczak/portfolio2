@@ -34,6 +34,16 @@
 		li {
 			display: inline-block;
 			margin: 10px 30px;
+			padding: 3px 6px;
+			border-bottom-left-radius: 8px;
+			border-left: 1px solid $color4;
+			border-bottom: 1px solid $color4;; 
+		}
+		
+		@for $i from 0 to 9 {
+			li:nth-child(#{$i + 1}) {
+				animation: iterateWhoisList 9s ease-in-out #{$i * 1s} infinite;
+			}
 		}
 
 		a {
@@ -76,9 +86,35 @@
 		width: 100%;
 		float: none;
 
+		.whois-container {
+			max-width: 90%;
+			min-height: auto;
+			height: auto;
+			margin: 20px auto;
+			padding: 20px;
+		}
+
 		&::before,
 		&::after {
 			display: none;
 		}
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	#whois-section {
+		margin: 100px 0;
+
+		.whois-container {
+			h1 {
+				font-size: 2em;
+			}
+
+			li {
+				margin: 7px 10px;
+				font-size: 0.9em;
+			}
+		}
+
 	}
 }

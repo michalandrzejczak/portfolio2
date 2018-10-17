@@ -119,8 +119,21 @@
 
 @media only screen and (max-width: 768px) {
 	#contact-section {
-		&::before {
-			display: none;
+		height: auto;
+		margin: 100px 0;
+
+		.contact-container {
+			width: 90%;
+			min-width: 90%;
+			padding: 20px;
+
+			h1 {
+				font-size: 2em;
+			}
+		}
+
+			&::before {
+				display: none;
+			}
 		}
 	}
-}

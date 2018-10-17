@@ -44,11 +44,27 @@
 @media only screen and (max-width: 768px) {
 	#home-section {
 		.home-container {
-			min-width: 90%;
-			width: 90%;
+			min-width: 85%;
+			width: 85%;
+
+			h1 {
+				font-size: 2em;
+			}
+
+			h2 {
+				font-size: 1.2em;
+			}
 		}
+
 		&::after {
 			display: none;
 		}
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	#home-section {
+		height: auto;
+		margin: 100px 0;
 	}
 }
