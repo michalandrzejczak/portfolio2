@@ -16,12 +16,12 @@
 
 @keyframes iterateWhoisList {
 	0%, 10%, 20%, 100% {
-		border-left: 1px solid $color4;
-		border-bottom: 1px solid $color4;; 
+		border-left: 1px solid rgba(63, 94, 90, 1);
+		border-bottom: 1px solid rgba(63, 94, 90, 1);
 	}
 	15% {
-		border-left: 1px solid $color5;
-		border-bottom: 1px solid $color5;
+		border-left: 1px solid rgba(32, 252, 143, 1);
+		border-bottom: 1px solid rgba(32, 252, 143, 1);
 	}
 }
 

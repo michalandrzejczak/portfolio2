@@ -1,120 +1,120 @@
 #whois-section {
-	float: left;
-	position: relative;
-	height: 100%;
-	width: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: $color1;
+    float: left;
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color1;
 
-	.whois-container {
-		max-width: 800px;
-		min-height: 400px;
-		margin: 20px auto;
-		padding: 30px;
-		z-index: 2;
-		border-top-left-radius: 50px;
-		border-top-right-radius: 50px;
-		border-bottom-left-radius: 50px;
-		border: 1px solid $color4;
-		background-color: $color3;
+    .whois-container {
+        max-width: 800px;
+        min-height: 400px;
+        margin: 20px auto;
+        padding: 30px;
+        z-index: 2;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+        border: 1px solid $color4;
+        background-color: $color3;
 
-		h1 {
-			font-size: 3em;
-			color: $color5;
-		}
+        h1 {
+            font-size: 3em;
+            color: $color5;
+        }
 
-		ul {
-			padding: 0;
-			margin: 0;
-			text-align: center;
-		}
+        ul {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
 
-		li {
-			display: inline-block;
-			margin: 10px 30px;
-			padding: 3px 6px;
-			border-bottom-left-radius: 8px;
-			border-left: 1px solid $color4;
-			border-bottom: 1px solid $color4;; 
-		}
-		
-		@for $i from 0 to 9 {
-			li:nth-child(#{$i + 1}) {
-				animation: iterateWhoisList 9s ease-in-out #{$i * 1s} infinite;
-			}
-		}
+        li {
+            display: inline-block;
+            margin: 10px 30px;
+            padding: 3px 6px;
+            border-bottom-left-radius: 8px;
+            border-left: 1px solid $color4;
+            border-bottom: 1px solid $color4;
+        }
 
-		a {
-			color: inherit;
-			text-decoration: underline;
-			transition: all 0.3s ease;
+        @for $i from 0 to 9 {
+            li:nth-child(#{$i + 1}) {
+                animation: iterateWhoisList 9s ease-in-out #{$i * 1s} infinite;
+            }
+        }
 
-			&:hover {
-				text-shadow: 0 0 10px #fff;
-			}
-		}
-	}
+        a {
+            color: inherit;
+            text-decoration: underline;
+            transition: all 0.3s ease;
 
-	&::before {
-		content: "";
-		height: 100%;
-		width: 2px;
-		border-right: 2px dotted $color4;
-		display: block;
-		position: relative;
-		left: 50%;
-		top: -50%;
-		margin-left: -1px;
-	}
+            &:hover {
+                text-shadow: 0 0 10px #fff;
+            }
+        }
+    }
 
-	&::after {
-		content: "";
-		height: 2px;
-		width: 100%;
-		border-top: 2px dotted $color4;
-		display: block;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-	}
+    &::before {
+        content: "";
+        height: 100%;
+        width: 2px;
+        border-right: 2px dotted $color4;
+        display: block;
+        position: relative;
+        left: 50%;
+        top: -50%;
+        margin-left: -1px;
+    }
+
+    &::after {
+        content: "";
+        height: 2px;
+        width: 100%;
+        border-top: 2px dotted $color4;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
-	#whois-section {
-		width: 100%;
-		float: none;
+    #whois-section {
+        width: 100%;
+        float: none;
 
-		.whois-container {
-			max-width: 90%;
-			min-height: auto;
-			height: auto;
-			margin: 20px auto;
-			padding: 20px;
-		}
+        .whois-container {
+            max-width: 90%;
+            min-height: auto;
+            height: auto;
+            margin: 20px auto;
+            padding: 20px;
+        }
 
-		&::before,
-		&::after {
-			display: none;
-		}
-	}
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
 }
 
 @media only screen and (max-width: 500px) {
-	#whois-section {
-		margin: 100px 0;
+    #whois-section {
+        margin: 100px 0;
 
-		.whois-container {
-			h1 {
-				font-size: 2em;
-			}
+        .whois-container {
+            h1 {
+                font-size: 2em;
+            }
 
-			li {
-				margin: 7px 10px;
-				font-size: 0.9em;
-			}
-		}
+            li {
+                margin: 7px 10px;
+                font-size: 0.9em;
+            }
+        }
 
-	}
+    }
 }
