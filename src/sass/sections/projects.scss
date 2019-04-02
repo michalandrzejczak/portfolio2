@@ -9,7 +9,7 @@
     background-color: $color1;
     z-index: 1;
 
-    div[class^="arrow"] {
+    .arrow-left, .arrow-right {
         z-index: 10;
         position: absolute;
         margin: 0 20px;
@@ -37,6 +37,17 @@
 
     .arrow-right {
         right: 5%;
+    }
+
+    .arrow-mobile {
+        display: none;
+        position: absolute;
+        z-index: 10;
+        bottom: 5%;
+        font-size: 30px;
+        color: darken($color1, 10%);
+        opacity: 0.5;
+        animation: pulseArrowMobile 30s ease-in-out infinite;
     }
 
     h1 {
@@ -194,8 +205,12 @@
             display: none;
         }
 
-        div[class^="arrow"] {
+        .arrow-left, .arrow-right {
             display: none;
+        }
+
+        .arrow-mobile {
+            display: block;
         }
 
         h1 {
