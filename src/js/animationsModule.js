@@ -55,8 +55,11 @@ $(function () {
     mountScrollMagic(); // initial check on ScrollMagic mounting
 
     let timeout = false; // debouncing helper
+    const windowWidth = window.innerWidth; // checking only vertical window resize helper
 
     window.addEventListener("resize", () => {
+        if (window.innerWidth == windowWidth) return;
+
         if (!timeout) {
             timeout = true;
             document.location.reload(true);
