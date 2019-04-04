@@ -51,8 +51,7 @@
                 margin-top: 1em;
             }
 
-            input,
-            textarea {
+            input, textarea {
                 width: 218px;
                 background-color: darken($color4, 5%);
                 border: 1px solid transparent;
@@ -129,6 +128,30 @@
 
             h1 {
                 font-size: 2em;
+            }
+
+            .contact-form-container {
+                display: block;
+
+                input, textarea {
+                    width: 100%;
+                }
+
+                .contact-form-row1 {
+                    label {
+                        display: block;
+                        margin-top: 10px;
+                    }
+                }
+
+                .contact-submit {
+                    text-align: center;
+
+                    button {
+                        position: static;
+                        padding: 10px 20px;
+                    }
+                }
             }
         }
 
