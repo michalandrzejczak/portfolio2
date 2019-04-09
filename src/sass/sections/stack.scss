@@ -55,51 +55,51 @@
         }
 
         .tech-wrapper1 {
-            @include techPulse("strong", #ff4500)
+            @include techPulse("strong", #ff4500);
         }
 
         .tech-wrapper2 {
-            @include techPulse("strong", #2973ff)
+            @include techPulse("strong", #2973ff);
         }
 
         .tech-wrapper3 {
-            @include techPulse("medium", #ffc016)
+            @include techPulse("medium", #ffc016);
         }
 
         .tech-wrapper4 {
-            @include techPulse("medium", #eb2931)
+            @include techPulse("medium", #eb2931);
         }
 
         .tech-wrapper5 {
-            @include techPulse("medium", #c92f00)
+            @include techPulse("medium", #c92f00);
         }
 
         .tech-wrapper6 {
-            @include techPulse("strong", #001c91)
+            @include techPulse("strong", #001c91);
         }
 
         .tech-wrapper7 {
-            @include techPulse("strong", #f03a4f)
+            @include techPulse("strong", #f03a4f);
         }
 
         .tech-wrapper8 {
-            @include techPulse("medium", #3efcdf)
+            @include techPulse("medium", #3efcdf);
         }
 
         .tech-wrapper9 {
-            @include techPulse("weak", #c31f1f)
+            @include techPulse("weak", #c31f1f);
         }
 
         .tech-wrapper10 {
-            @include techPulse("strong", #e84275)
+            @include techPulse("strong", #e84275);
         }
 
         .tech-wrapper11 {
-            @include techPulse("weak", #0869bc)
+            @include techPulse("weak", #0869bc);
         }
 
         .tech-wrapper12 {
-            @include techPulse("weak", #b332e3)
+            @include techPulse("weak", #b332e3);
         }
     }
 
@@ -117,8 +117,33 @@
         float: none;
         margin: 100px 0;
 
+        .stack-container {
+            padding: 10px;
+
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+
         &::before {
             display: none;
         }
+
+        .tech-gallery {
+            [class^="tech-wrapper"] {
+                animation: none !important;
+                margin: 8px;
+
+                img {
+                    height: 55px;
+                    width: 55px;
+                }
+            }
+        }
+
+        .tech-instruction {
+            display: none;
+        }
+
     }
 }
