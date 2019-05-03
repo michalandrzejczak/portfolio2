@@ -1,24 +1,59 @@
-$(function() {
-    $("#contact-form").submit(function(event) {
+$(function () {
+    let request;
+
+    $('#contact-form').on('submit', function (event) {
         event.preventDefault();
-        alert("msg sent");
-    /*    let name = $("contact-name").value,
-                email = $("contact-email").value,
-                message = $("contact-message").value;
-        $.ajax({
-            url: "https://formspree.io/micequ@gmail.com", 
-            type: "POST",
-            dataType: "json",
-            data: {
-                "name": name,
-                "email": email,
-                "message": message
-            },
-            cache:false,
-            success: function(msg) {
-                alert('Email Sent');
-                $('#msg').html(msg);
-            }               
-        });*/
+
+        $('.loader').fadeIn();
+        $('.overlay').fadeIn();
+
+        if (request) {
+            request.abort();
+        };
+
+        const $form = $(this),
+            $inputs = $form.find("input, textarea"),
+            serializedData = $form.serialize();
+
+        $inputs.prop("disabled", true);
+
+        request = $.ajax({
+            url: "contact.php",
+            type: "post",
+            data: serializedData
+        });
+
+        request.done(function (response, textStatus, jqXHR) {
+            const $feedbackList = $('.contact-feedback-list');
+            $feedbackList.html('');
+
+            if (response.success) {
+                $feedbackList.append(`<li><i class="fas fa-check"></i>${response.success}</li>`);
+                setTimeout(() => {
+                    $feedbackList.find('li').fadeOut('slow', () => {
+                        $(this).remove();
+                    });
+                }, 3000);
+                $inputs.val('');
+            } else if (response.errors) {
+                response.errors.forEach(error => {
+                    $feedbackList.append(`<li class="error"><i class="fas fa-exclamation"></i>${error}</li>`);
+                })
+            } else {
+                $feedbackList.append(`<li class="error"><i class="fas fa-exclamation"></i>Unidentified problem</li>`);
+            }
+        });
+
+        request.fail(function (jqXHR, textStatus, errorThrown) {
+            console.error(
+                "XHR error: " + textStatus, errorThrown
+            );
+        });
+
+        request.always(function () {
+            $inputs.prop("disabled", false);
+            $('.loader').fadeOut();
+            $('.overlay').fadeOut();
+        });
     });
-})
+});

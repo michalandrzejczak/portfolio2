@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>Michał Andrzejczak - front end developer</title>
@@ -222,8 +221,9 @@
     <section id="contact-section">
         <div class="contact-container">
             <h1>Contact me</h1>
+            <ul class="contact-feedback-list"></ul>
             <div class="contact-form-container">
-                <form id="contact-form" method="post" action="">
+                <form id="contact-form">
                     <div class="contact-form-row1">
                         <label for="contact-name">
                             Name<br/>
@@ -241,16 +241,16 @@
                     <div class="contact-submit">
                         <button type="submit">Submit</button>
                     </div>
+                    <div class="loader"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>
                 </form>
             </div>
+            <div class="overlay"></div>
         </div>
     </section>
-    
-    
-    
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>                     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
     <script defer src="scripts.bundle.js"></script>
 </body>
 
