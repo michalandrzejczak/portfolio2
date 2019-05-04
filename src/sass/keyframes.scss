@@ -14,6 +14,18 @@
     {box-shadow: 0 0 0 rgba(32, 252, 143, 1);}
 }
 
+@keyframes slideHomeDeveloper {
+    0%, 10%, 40%, 45%, 60%, 80% { // front end
+        transform: translate(0, 2.4em);
+    }
+    30%, 50%, 90%, 100% { // web
+        transform: translate(0, 1.2em);
+    }
+    20%, 35%, 70%, 95% { // php
+        transform: translate(0, 0);
+    }
+}
+
 @keyframes iterateWhoisList {
     0%, 10%, 20%, 100% {
         border-left: 1px solid rgba(63, 94, 90, 1);

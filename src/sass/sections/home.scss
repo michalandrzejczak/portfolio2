@@ -25,6 +25,36 @@
 
         h2 {
             color: $color5;
+            display: flex;
+            justify-content: center;
+            height: 1.2em;
+            .home-slider {
+                display: inline-block;
+                position: relative;
+                overflow: hidden;
+                height: 1.2em;
+                margin-right: 7px;
+                padding: 0 6px;
+                border-left: 1px solid $color3;
+                border-right: 1px solid $color3;
+            }
+            .home-slider div {
+                position: relative;
+                height: 1.2em;
+                animation-timing-function: ease-in-out;
+            }
+            .home-slider div:nth-child(1) {
+                top: -2.4em;
+                animation: slideHomeDeveloper 20s infinite alternate;
+            }
+            .home-slider div:nth-child(2) {
+                top: -2.4em;
+                animation: slideHomeDeveloper 20s infinite alternate;
+            }
+            .home-slider div:nth-child(3) {
+                top: -2.4em;
+                animation: slideHomeDeveloper 20s infinite alternate;
+            }
         }
     }
 
