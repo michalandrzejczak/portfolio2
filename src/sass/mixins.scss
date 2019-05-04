@@ -3,13 +3,11 @@
     $name: techStrongPulse+$colorName;
     @keyframes #{$name} {
         0%, 33%, 100% {
-            transform: none;
-            filter: blur(1px) grayscale(0.8);
+            filter: brightness(1) grayscale(0.8);
         }
 
         15% {
-            transform: scale(1.3); 
-            filter: blur(0) grayscale(0) brightness(3) drop-shadow(0 0 50px $color);
+            filter: brightness(1.5) grayscale(0) drop-shadow(0 0 30px $color);
         }
     }
 }
@@ -19,13 +17,11 @@
     $name: techMediumPulse+$colorName;
     @keyframes #{$name} {
         0%, 33%, 100% {
-            transform: none;
-            filter: blur(1px) grayscale(0.8);
+            filter: brightness(1) grayscale(0.8);
         }
 
         15% {
-            transform: scale(1.1); 
-            filter: blur(0) grayscale(0) brightness(1.5) drop-shadow(0 0 30px $color);
+            filter: brightness(1.1) grayscale(0.3) drop-shadow(0 0 20px darken($color, 0.3));
         }
     }
 }
@@ -35,13 +31,11 @@
     $name: techWeakPulse+$colorName;
     @keyframes #{$name} {
         0%, 33%, 100% {
-            transform: none;
-            filter: blur(1px) grayscale(0.8);
+            filter: grayscale(0.8);
         }
 
         15% {
-            transform: scale(1.1); 
-            filter: blur(0) grayscale(0.3) drop-shadow(0 0 20px darken($color, 0.3));
+            filter: grayscale(0.5) drop-shadow(0 0 10px darken($color, 0.5));
         }
     }
 }

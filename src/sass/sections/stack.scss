@@ -67,38 +67,42 @@
         }
 
         .tech-wrapper4 {
-            @include techPulse("medium", #eb2931);
+            @include techPulse("medium", #ff2a0f);
         }
 
         .tech-wrapper5 {
-            @include techPulse("medium", #c92f00);
+            @include techPulse("medium", #eb2931);
         }
 
         .tech-wrapper6 {
-            @include techPulse("strong", #001c91);
+            @include techPulse("medium", #ff3f1c);
         }
 
         .tech-wrapper7 {
-            @include techPulse("strong", #f03a4f);
+            @include techPulse("strong", #123ded);
         }
 
         .tech-wrapper8 {
-            @include techPulse("medium", #3efcdf);
+            @include techPulse("strong", #583b7e);
         }
 
         .tech-wrapper9 {
-            @include techPulse("weak", #c31f1f);
+            @include techPulse("medium", #3efcdf);
         }
 
         .tech-wrapper10 {
-            @include techPulse("strong", #e84275);
+            @include techPulse("weak", #c31f1f);
         }
 
         .tech-wrapper11 {
-            @include techPulse("weak", #0869bc);
+            @include techPulse("medium", #3fb27f);
         }
 
         .tech-wrapper12 {
+            @include techPulse("strong", #ff1c61);
+        }
+
+        .tech-wrapper13 {
             @include techPulse("weak", #b332e3);
         }
     }
