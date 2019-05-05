@@ -109,7 +109,8 @@
 
     .tech-instruction {
         margin-top: 20px;
-        color: $color4;
+        color: scale-color($color4, $lightness: 40%, $saturation: 20%);
+        letter-spacing: 0.3px;
         font-size: 0.8em;
     }
 }
