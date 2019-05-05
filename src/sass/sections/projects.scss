@@ -112,6 +112,7 @@
         @include projectBg("unsplash");
         @include projectBg("jar");
         @include projectBg("jdm");
+        @include projectBg("portfolio2");
         @include projectBg("portfolio1");
         @include projectBg("psdtohtml2");
         @include projectBg("psdtohtml1");
@@ -126,10 +127,12 @@
 
             h3 {
                 color: $color5;
+                margin: 10px 0;
             }
 
             p {
                 font-size: 0.9em;
+                text-align: justify;
                 color: darken($fontcolor, 0.9);
             }
         }
@@ -148,11 +151,10 @@
             transition: all 0.3s ease;
 
             a {
-                color: $fontcolor;
                 text-decoration: none;
-                transition: all 0.3s ease;
 
                 &:hover {
+                    text-shadow: none;
                     color: $color5;
                 }
             }

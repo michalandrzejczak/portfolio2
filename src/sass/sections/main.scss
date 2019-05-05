@@ -27,6 +27,16 @@ p {
     line-height: 1.5em;
 }
 
+a {
+    color: inherit;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+
+    &:hover {
+        text-shadow: 0 0 10px #fff;
+    }
+}
+
 h1,
 h2,
 h3 {

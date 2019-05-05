@@ -45,16 +45,6 @@
                 animation: iterateWhoisList 9s ease-in-out #{$i * 1s} infinite;
             }
         }
-
-        a {
-            color: inherit;
-            text-decoration: underline;
-            transition: all 0.3s ease;
-
-            &:hover {
-                text-shadow: 0 0 10px #fff;
-            }
-        }
     }
 
     &::before {
