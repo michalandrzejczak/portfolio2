@@ -1,4 +1,4 @@
-#cite-section {
+#goals-section {
     float: left;
     position: relative;
     height: 100%;
@@ -9,17 +9,13 @@
     background-color: $color1;
     z-index: 1;
 
-    .cite-container {
+    .goals-container {
         position: relative;
         width: 600px;
-        height: 200px;
-        text-align: center;
+        height: 300px;
         margin: 20px auto;
         padding: 30px;
         z-index: 3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         border-top-right-radius: 50px;
         border-bottom-left-radius: 50px;
         border-left: 1px solid $color5;
@@ -27,32 +23,32 @@
         background-color: $color2;
         color: $color5;
 
-        .cite-text {
-            color: $color5;
-            font-size: 1.5em;
-
-            &::before,
-            &::after {
-                font-size: 2em;
-                font-weight: 400;
-                color: $color4;
-            }
-
-            &::before {
-                content: '\201C';
-            }
-
-            &::after {
-                content: '\201D';
-            }
+        h1 {
+            z-index: -1;
+            font-size: 5em;
+            font-weight: 700;
+            position: absolute;
+            right: 20px;
+            bottom: -50px;
+            color: $color1;
         }
 
-        .cite-author {
-            position: absolute;
-            bottom: 15%;
-            right: 10%;
-            color: $color4;
-            font-size: 1em;
+        .goals-list {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+
+            li {
+                margin: 3px;
+                border-left: 3px dotted;
+                padding: 5px 0 0 10px;
+                font-size: 1.2em;
+            }
+            @for $i from 0 to 7 {
+                li:nth-child(#{$i + 1}) {
+                    color: scale-color($color5, $saturation: -15%*$i, $lightness: -5%*$i);
+                }
+            }
         }
     }
 
@@ -83,22 +79,13 @@
 }
 
 @media only screen and (max-width: 768px) {
-    #cite-section {
+    #goals-section {
         width: 100%;
         float: none;
 
-        .cite-container {
+        .goals-container {
             width: 90%;
             padding: 20px;
-
-            .cite-text {
-                font-size: 1.2em;
-
-                &::before,
-                &::after {
-                    font-size: 1.5em;
-                }
-            }
 
         }
 
