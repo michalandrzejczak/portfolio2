@@ -221,16 +221,20 @@
         }
 
         .projects-container {
+            height: 400px;
 
             .project-wrapper {
-                min-width: 150px;
-                height: 100px;
+                min-width: 180px;
+                height: 220px;
                 margin: 0 15px;
+                border-top: 2px solid $color1;
+                border-left: 2px solid $color1;
+                border-radius: 20px;
+                background-color: transparent;
             }
 
             .project-bg {
-                min-width: 150px;
-                height: 100px;
+                display: none;
             }
 
             .project-content-wrapper {
@@ -242,7 +246,18 @@
                 }
 
                 p {
-                    display: none;
+                    font-size: 0.75em;
+                }
+            }
+
+            .project-anchors {
+                display: flex;
+                width: 180px;
+                height: 40px;
+                background: transparent;
+
+                i {
+                    font-size: 1em;
                 }
             }
         }
