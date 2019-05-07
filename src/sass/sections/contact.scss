@@ -91,6 +91,10 @@
                 &:focus {
                     border: 1px solid $color5;
                 }
+
+                &:invalid {
+                    box-shadow: none;
+                }
             }
 
             textarea {
