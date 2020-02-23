@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const cssmin = require('gulp-cssmin');
 const htmlmin = require('gulp-htmlmin');
-const sass = require('gulp-ruby-sass');
+const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const babel = require('gulp-babel');
 const browserify = require('gulp-browserify');
@@ -11,6 +11,8 @@ const clean = require('gulp-clean');
 const ignore = require('gulp-ignore');
 const runSequence = require('run-sequence');
 const autoprefixer = require('gulp-autoprefixer');
+
+sass.compiler = require('node-sass');
 
 gulp.task('clean', () =>
     gulp.src('./dist', {
@@ -22,8 +24,8 @@ gulp.task('clean', () =>
 );
 
 gulp.task('buildcss', () => {
-    gulp.src('./src/sass/*.scss')
-    return sass('./src/sass/*.scss').on('error', sass.logError)
+    return gulp.src('./src/sass/*.scss')
+        .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false

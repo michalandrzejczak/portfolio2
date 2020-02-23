@@ -109,6 +109,7 @@
             }
         }
 
+        @include projectBg("foodplan");
         @include projectBg("unsplash");
         @include projectBg("jar");
         @include projectBg("jdm");

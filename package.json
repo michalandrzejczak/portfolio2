@@ -24,7 +24,7 @@
   "bugs": {
     "url": "url/issues"
   },
-	"homepage": "https://github.com/michalandrzejczak/portfolio2#readme",
+  "homepage": "https://github.com/michalandrzejczak/portfolio2#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
@@ -40,8 +40,10 @@
     "gulp-ignore": "^2.0.2",
     "gulp-rename": "^1.2.2",
     "gulp-rimraf": "^0.2.2",
-    "gulp-ruby-sass": "^3.0.0",
+    "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.0",
+    "natives": "^1.1.6",
+    "node-sass": "^4.13.1",
     "run-sequence": "^2.2.1",
     "scrollmagic": "^2.0.5"
   },
