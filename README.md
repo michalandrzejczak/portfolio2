@@ -1,3 +1,3 @@
 # portfolio2
 
-https://michalandrzejczak.dev
+https://michalandrzejczak.github.io/portfolio2/dist/index.html
